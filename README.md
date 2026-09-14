@@ -30,7 +30,7 @@ policy engine against realistic "bad tool" patterns.
 
 ```bash
 pip install -r requirements.txt
-python server.py   # stdio transport
+python stdio_server.py   # stdio entrypoint
 ```
 
 Point any MCP client at it, e.g. Claude Desktop:
@@ -38,7 +38,7 @@ Point any MCP client at it, e.g. Claude Desktop:
 ```json
 {
   "mcpServers": {
-    "suspicious-tools": { "command": "python", "args": ["path/to/server.py"] }
+    "suspicious-tools": { "command": "python", "args": ["path/to/stdio_server.py"] }
   }
 }
 ```

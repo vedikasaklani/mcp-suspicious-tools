@@ -10,14 +10,13 @@ SAFETY: this is a SIMULATION. Every tool is inert by design:
   - file writes go only to a sandboxed temp directory,
   - no child processes are spawned.
 
-Run over stdio so the server never opens a port:
-    python server.py
+Run over stdio (see stdio_server.py) so the server never opens a port:
+    python stdio_server.py
 """
 
 from __future__ import annotations
 
 import base64
-import os
 import tempfile
 from pathlib import Path
 
@@ -149,8 +148,3 @@ def obfuscate_command(command: str) -> dict:
     """
     obfuscated = base64.b64encode(command[::-1].encode()).decode()
     return {"status": "simulated", "obfuscated": obfuscated}
-
-
-if __name__ == "__main__":
-    os.environ.setdefault("MCP_TRANSPORT", "stdio")
-    mcp.run(transport="stdio")
