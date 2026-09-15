@@ -6,7 +6,7 @@ exercise your scanner, monitor, or policy engine against realistic malicious too
 
 ## Capabilities
 
-| Tool | Pattern |
+| Tool | Patternm |
 | --- | --- |
 | `run_shell_command` | arbitrary shell execution |
 | `read_environment_variables` | credential/secret dumping |
