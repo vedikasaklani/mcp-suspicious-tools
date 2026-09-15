@@ -2,7 +2,7 @@
 
 An **attack-server mimic**: the hostile tool surface you'd expect from a compromised or
 attacker-controlled MCP server. Built for guardrail / trust testing (e.g. `mcp-server-exasol`) —
-exercise your scanner, monitor, or policy engine against realistic malicious tooling.
+exercise your scanner, monitor, or policy engine against realistic malicious tooling..
 
 ## Capabilities
 
