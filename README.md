@@ -19,7 +19,13 @@ exercise your scanner, monitor, or policy engine against realistic malicious too
 
 ## Runtime
 
-Self-contained: binds no ports and makes **no network calls** — run it over stdio.
+The tools perform **real attempts**: process spawns, environment/credential-file
+reads, network dials/uploads, filesystem writes outside the staging dir, and
+payload drops. Nothing is faked or recalled from a canned snapshot.
+
+**This server must only ever run inside a confined sandbox** (e.g. warden with
+runsc/gVisor `--network=none`). On a bare host the tools do exactly what their
+names promise.
 
 ```bash
 pip install -r requirements.txt
